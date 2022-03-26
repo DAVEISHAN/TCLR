@@ -1,5 +1,6 @@
-# TCLR
+# TCLR: Temporal Contrastive Learning for Video Representation [CVIU March, 2022]
 Official code repo for TCLR: Temporal Contrastive Learning for Video Representation
+Published at Computer Vision and Image Understanding Journal [Paper](https://doi.org/10.1016/j.cviu.2022.103406) and [Arxiv Version](https://arxiv.org/abs/2101.07974)
 
 ### Preparation: Environment and Dataset
 
@@ -34,15 +35,7 @@ GPU Memory requirement: **48G**
   
 In config.py file give location to "path_folder" where the above two full `train_vids.txt` and `testing_vids.txt` files are located 
 
-Activate the environment
-```
-  conda activate tclr_env
-  ```
-or 
-```
-  source activate tclr_env
-  ```
-
+Activate the environment: `conda activate tclr_env` or `source activate tclr_env`
 
 
 Run TCLR pretraining code using the following command:
@@ -55,12 +48,10 @@ Use "--restart" to continue the stopped training
 The pretraining will save models at `tclr_pretraining/ss_saved_models` and tensorboard logs in `tclr_pretraining/logs`
 
 ### Linear Evaluation (Linear Classification)
-```
-cd linear_eval
-  ```
 
+Change directory to `cd linear_eval`
 
-In config.py file give location to "path_folder" where the above two full `train_vids.txt` and `testing_vids.txt` files are located 
+In `config.py` file give location to "path_folder" where the above two full `train_vids.txt` and `testing_vids.txt` files are located 
 
 Run the linear evaluation code using the following command:
 
@@ -70,3 +61,16 @@ python train.py --saved_model="FULL/PATH/TO/SAVED/PRETRAINED/MODEL" --linear
 
 The trained linear classifier will be saved at `linear_eval/saved_models` and tensorboard logs in `linear_eval/logs`
 
+### Citation
+If you find the repo useful for your research, please consider citing our paper: 
+```
+@article{dave2022tclr,
+  title={Tclr: Temporal contrastive learning for video representation},
+  author={Dave, Ishan and Gupta, Rohit and Rizve, Mamshad Nayeem and Shah, Mubarak},
+  journal={Computer Vision and Image Understanding},
+  pages={103406},
+  year={2022},
+  publisher={Elsevier}
+}
+```
+For any questions, welcome to create an issue or contact Ishan Dave ([ishandave@knights.ucf.edu](mailto:ishandave@knights.ucf.edu)).
