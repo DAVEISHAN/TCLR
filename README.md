@@ -1,6 +1,5 @@
 # TCLR: Temporal Contrastive Learning for Video Representation [CVIU March, 2022]
-Official code repo for TCLR: Temporal Contrastive Learning for Video Representation
-Published at Computer Vision and Image Understanding Journal [Paper](https://doi.org/10.1016/j.cviu.2022.103406) and [Arxiv Version](https://arxiv.org/abs/2101.07974)
+Official code repo for TCLR: Temporal Contrastive Learning for Video Representation, Computer Vision and Image Understanding Journal [Paper](https://doi.org/10.1016/j.cviu.2022.103406) and [Arxiv Version](https://arxiv.org/abs/2101.07974)
 
 ### Preparation: Environment and Dataset
 
