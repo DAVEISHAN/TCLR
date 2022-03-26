@@ -60,6 +60,12 @@ python train.py --saved_model="FULL/PATH/TO/SAVED/PRETRAINED/MODEL" --linear
 
 The trained linear classifier will be saved at `linear_eval/saved_models` and tensorboard logs in `linear_eval/logs`
 
+### TODO: Nearest Neighbour Retrieval
+
+### TODO: Pretrained weights
+
+
+
 ### Citation
 If you find the repo useful for your research, please consider citing our paper: 
 ```
