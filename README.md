@@ -1,7 +1,7 @@
 # TCLR
 Official code repo for TCLR: Temporal Contrastive Learning for Video Representation
 
-##Preparation: Environment and Dataset
+### Preparation: Environment and Dataset
 
 First make enviroment from tclr_env.yml using:
 
@@ -25,7 +25,7 @@ l2: FULL/PATH/ApplyMakeup/xyz.avi
   TODO: Put ls commands here
   ```
   
-##Self-supervised Pretraining
+### Self-supervised Pretraining
 
 GPU Memory requirement: **48G**
 
@@ -55,7 +55,7 @@ Use "--restart" to continue the stopped training
 
 The pretraining will save models at `tclr_pretraining/ss_saved_models` and tensorboard logs in `tclr_pretraining/logs`
 
-##Linear Evaluation (Linear Classification)
+### Linear Evaluation (Linear Classification)
 ```
 cd linear_eval
   ```
