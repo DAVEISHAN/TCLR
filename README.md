@@ -63,11 +63,9 @@ The trained linear classifier will be saved at `linear_eval/saved_models` and te
 ### TODO: Nearest Neighbour Retrieval
 
 ### Pretrained weights
- ```
-R3D-18 with UCF101 pretraining: [Google Drive](https://drive.google.com/file/d/1Y-YmohPPeZKmd8MO_KVYKDNoIbzpjQWV/view?usp=sharing) \\
-R3D-18 with Kinetics400 pretraining: [Google Drive](https://drive.google.com/file/d/1m-u8N18dYFqP9B2JF3dEYOowKg3xDrds/view?usp=sharing) \\
-R2+1D-18 with Kinetics400 pretraining: [Google Drive](https://drive.google.com/file/d/1cuM4vFJA8wDDYmkQeAhwBUDQD0aDGmqD/view?usp=sharing)
- ```
+ 
+R3D-18 with UCF101 pretraining: [Google Drive](https://drive.google.com/file/d/1Y-YmohPPeZKmd8MO_KVYKDNoIbzpjQWV/view?usp=sharing)  R3D-18 with Kinetics400 pretraining: [Google Drive](https://drive.google.com/file/d/1m-u8N18dYFqP9B2JF3dEYOowKg3xDrds/view?usp=sharing)  R2+1D-18 with Kinetics400 pretraining: [Google Drive](https://drive.google.com/file/d/1cuM4vFJA8wDDYmkQeAhwBUDQD0aDGmqD/view?usp=sharing)
+
  
 ### Citation
 If you find the repo useful for your research, please consider citing our paper: 
