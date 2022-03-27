@@ -66,6 +66,7 @@ The trained linear classifier will be saved at `linear_eval/saved_models` and te
  
 R3D-18 with UCF101 pretraining: [Google Drive](https://drive.google.com/file/d/1Y-YmohPPeZKmd8MO_KVYKDNoIbzpjQWV/view?usp=sharing)<br/>R3D-18 with Kinetics400 pretraining: [Google Drive](https://drive.google.com/file/d/1m-u8N18dYFqP9B2JF3dEYOowKg3xDrds/view?usp=sharing)<br/>R2+1D-18 with Kinetics400 pretraining: [Google Drive](https://drive.google.com/file/d/1cuM4vFJA8wDDYmkQeAhwBUDQD0aDGmqD/view?usp=sharing)
 
+Pl, note that all models are trained on BGR video input, for inference dataloading refer to `linear_eval/dl_linear`
  
 ### Citation
 If you find the repo useful for your research, please consider citing our paper: 
