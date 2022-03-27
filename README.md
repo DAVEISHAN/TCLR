@@ -6,7 +6,7 @@ Official code repo for TCLR: Temporal Contrastive Learning for Video Representat
 First make enviroment from tclr_env.yml using:
 
   ```
-  conda env create -f environment.yml
+  conda env create -f tclr_env.yml
   ```
 
 [Download UCF101](https://www.crcv.ucf.edu/data/UCF101/UCF101.rar) and [Splits files](https://www.crcv.ucf.edu/data/UCF101/UCF101TrainTestSplits-RecognitionTask.zip) in train - testing set (Use UCF101 split-1)
