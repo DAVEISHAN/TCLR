@@ -14,18 +14,25 @@ import parameters as params
 import json
 import math
 import cv2
-from tqdm import tqdm
+# from tqdm import tqdm
 import time
 import torchvision.transforms as trans
-from decord import VideoReader
+# from decord import VideoReader
 
 class ss_dataset_gen1(Dataset):
 
-    def __init__(self, shuffle = True, data_percentage = 1.0):
+    def __init__(self, shuffle = True, data_percentage = 1.0, split = 1):
         #####################      
         
-        self.all_paths = open(os.path.join(cfg.path_folder,'train_vids.txt'),'r').read().splitlines()
-
+        # self.all_paths = open(os.path.join(cfg.path_folder,'train_vids.txt'),'r').read().splitlines()
+        if split == 1:
+            self.all_paths = open(os.path.join(cfg.path_folder, 'ucfTrainTestlist/trainlist01.txt'),'r').read().splitlines()
+        elif split ==2: 
+            self.all_paths = open(os.path.join(cfg.path_folder, 'ucfTrainTestlist/trainlist02.txt'),'r').read().splitlines()
+        elif split ==3: 
+            self.all_paths = open(os.path.join(cfg.path_folder, 'ucfTrainTestlist/trainlist03.txt'),'r').read().splitlines()
+        else:
+            print(f'Invalid split input: {split}')
         #####################
         
         self.shuffle = shuffle
@@ -52,8 +59,7 @@ class ss_dataset_gen1(Dataset):
 
     def process_data(self, idx):
 
-        vid_path = self.data[idx]
-
+        vid_path = cfg.path_folder + '/UCF-101/' + self.data[idx].split(' ')[0]
         
         sparse_clip, dense_clip0, dense_clip1, dense_clip2, dense_clip3, \
             a_sparse_clip, a_dense_clip0, a_dense_clip1, a_dense_clip2, a_dense_clip3, list_sparse, list_dense = self.build_clip(vid_path)
