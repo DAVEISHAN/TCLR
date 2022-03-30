@@ -17,10 +17,16 @@ from decord import VideoReader
 
 class baseline_dataloader_train_strong(Dataset):
 
-    def __init__(self, shuffle = True, data_percentage = 1.0):
+    def __init__(self, shuffle = True, data_percentage = 1.0, split = 1):
 
-       self.all_paths = open(os.path.join(cfg.path_folder,'train_vids.txt'),'r').read().splitlines()
-        
+        if split == 1:
+            self.all_paths = open(os.path.join(cfg.path_folder, 'ucfTrainTestlist/trainlist01.txt'),'r').read().splitlines()
+        elif split ==2: 
+            self.all_paths = open(os.path.join(cfg.path_folder, 'ucfTrainTestlist/trainlist02.txt'),'r').read().splitlines()
+        elif split ==3: 
+            self.all_paths = open(os.path.join(cfg.path_folder, 'ucfTrainTestlist/trainlist03.txt'),'r').read().splitlines()
+        else:
+            print(f'Invalid split input: {split}')
 
 
         self.classes= json.load(open(cfg.class_mapping))['classes']
@@ -48,7 +54,7 @@ class baseline_dataloader_train_strong(Dataset):
     def process_data(self, idx):
     
         # label_building
-        vid_path = self.data[idx]
+        vid_path = cfg.path_folder + '/UCF-101/' + self.data[idx].split(' ')[0]
         
         label = self.classes[vid_path.split('/')[-2]] # This element should be activity name
         
@@ -174,8 +180,14 @@ class multi_baseline_dataloader_val_strong(Dataset):
 
     def __init__(self, shuffle = True, data_percentage = 1.0, mode = 0, \
                 hflip=0, cropping_factor=0.8):
-        self.all_paths = open(os.path.join(cfg.path_folder,'testing_vids.txt'),'r').read().splitlines()
-        
+        if split == 1:
+            self.all_paths = open(os.path.join(cfg.path_folder, 'ucfTrainTestlist/testlist01.txt'),'r').read().splitlines()
+        elif split ==2: 
+            self.all_paths = open(os.path.join(cfg.path_folder, 'ucfTrainTestlist/testlist02.txt'),'r').read().splitlines()
+        elif split ==3: 
+            self.all_paths = open(os.path.join(cfg.path_folder, 'ucfTrainTestlist/testlist03.txt'),'r').read().splitlines()
+        else:
+            print(f'Invalid split input: {split}')        
 
         self.classes= json.load(open(cfg.class_mapping))['classes']
         self.shuffle = shuffle
@@ -203,7 +215,7 @@ class multi_baseline_dataloader_val_strong(Dataset):
     def process_data(self, idx):
     
         # label_building
-        vid_path = self.data[idx]
+        vid_path = cfg.path_folder + '/UCF-101/' + self.data[idx].split(' ')[0]
         label = self.classes[vid_path.split('/')[-2]] # THIS MIGHT BE DIFFERNT AFTER STEVE MOVE THE PATHS  
         
         # clip_building
