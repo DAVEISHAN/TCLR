@@ -1,0 +1,5 @@
+path_folder = '../data' #'/home/idave/paths_newton_disk'
+# dataset_folder = '/datasets/UCF-101/TrainingData/'
+class_mapping = '../action_classes.json'#'/home/idave/paths_newton_disk/ucf101_action_classes.json'
+saved_models_dir = 'nnr_results/'
+logs = 'logs/'
