@@ -1,29 +1,24 @@
 # TCLR: Temporal Contrastive Learning for Video Representation [CVIU March, 2022]
-Official code repo for TCLR: Temporal Contrastive Learning for Video Representation, Computer Vision and Image Understanding Journal [Paper](https://doi.org/10.1016/j.cviu.2022.103406) and [Arxiv Version](https://arxiv.org/abs/2101.07974)
+Official code repo for TCLR: Temporal Contrastive Learning for Video Representation, Computer Vision and Image Understanding Journal [Paper](https://doi.org/10.1016/j.cviu.2022.103406) and [Arxiv Version](https://arxiv.org/abs/2101.07974). In the current state, the repository provides exactly reproduces our paper results for UCF101 self-supervised pretraining for R3D-18 model: **69.9\%** linear evaluation, **82\%** on Full-Finetuning,** 56.1\% ** on NN Retrieval.
 
 ### Preparation: Environment and Dataset
-
-First make enviroment from tclr_env.yml using:
-
-  ```
-  conda env create -f tclr_env.yml
-  ```
-
-[Download UCF101](https://www.crcv.ucf.edu/data/UCF101/UCF101.rar) and [Splits files](https://www.crcv.ucf.edu/data/UCF101/UCF101TrainTestSplits-RecognitionTask.zip) in train - testing set (Use UCF101 split-1)
-
 ```
-  TODO: Put unzip command here
-  ```
+# Clone the github to your path, expected space: 15G
+git clone https://github.com/DAVEISHAN/TCLR.git && cd TCLR
 
-Generate a file of full paths of training videos separarted by newlines, name it `train_vids.txt` and `testing_vids.txt`, example:
+# Create environment
+conda env create -f tclr_env.yml
 
-l1: FULL/PATH/ApplyMakeup/abc.avi
-l2: FULL/PATH/ApplyMakeup/xyz.avi
-
+# UCF101 data preparation
+mkdir data && cd data
+wget https://www.crcv.ucf.edu/data/UCF101/UCF101.rar --no-check-certificate
+unrar x UCF101.rar
+rm -rf UCF101.rar
+wget https://www.crcv.ucf.edu/data/UCF101/UCF101TrainTestSplits-RecognitionTask.zip --no-check-certificate
+unzip UCF101TrainTestSplits-RecognitionTask.zip
+rm -rf UCF101TrainTestSplits-RecognitionTask.zip
 ```
-  TODO: Put ls commands here
-  ```
-  
+
 ### Self-supervised Pretraining
 
 GPU Memory requirement: **48G**
@@ -32,10 +27,7 @@ GPU Memory requirement: **48G**
   cd tclr_pretraining/
   ```
   
-In config.py file give location to "path_folder" where the above two full `train_vids.txt` and `testing_vids.txt` files are located 
-
 Activate the environment: `conda activate tclr_env` or `source activate tclr_env`
-
 
 Run TCLR pretraining code using the following command:
 ```
