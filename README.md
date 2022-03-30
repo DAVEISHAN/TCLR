@@ -42,8 +42,6 @@ The pretraining will save models at `tclr_pretraining/ss_saved_models` and tenso
 
 Change directory to `cd linear_eval`
 
-In `config.py` file give location to "path_folder" where the above two full `train_vids.txt` and `testing_vids.txt` files are located 
-
 Run the linear evaluation code using the following command:
 
 ```
