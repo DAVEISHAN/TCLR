@@ -1,5 +1,5 @@
 # TCLR: Temporal Contrastive Learning for Video Representation [CVIU March, 2022]
-Official code repo for TCLR: Temporal Contrastive Learning for Video Representation, Computer Vision and Image Understanding Journal [Paper](https://doi.org/10.1016/j.cviu.2022.103406) and [Arxiv Version](https://arxiv.org/abs/2101.07974). In the current state, the repository exactly reproduces our paper results for UCF101 self-supervised pretraining for R3D-18 model: **69.9\%** linear evaluation, **82\%** on Full-Finetuning, **56.1\%** on NN Retrieval.
+Official code repo for TCLR: Temporal Contrastive Learning for Video Representation, Computer Vision and Image Understanding Journal [Paper](https://doi.org/10.1016/j.cviu.2022.103406) and [Arxiv Version](https://arxiv.org/abs/2101.07974). In the current state, the repository exactly reproduces state-of-the-art results of our paper for UCF101 self-supervised pretraining for R3D-18 model: **69.9\%** linear evaluation, **82\%** on Full-Finetuning, **56.1\%** on NN Retrieval.
 
 ### Preparation: Environment and Dataset
 ```
