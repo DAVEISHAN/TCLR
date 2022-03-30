@@ -50,7 +50,11 @@ python train.py --saved_model="FULL/PATH/TO/SAVED/PRETRAINED/MODEL" --linear
 
 The trained linear classifier will be saved at `linear_eval/saved_models` and tensorboard logs in `linear_eval/logs`
 
-### TODO: Nearest Neighbour Retrieval
+### Nearest Neighbour Retrieval
+```
+  cd nn_retreival
+  python complete_retrieval.py --run_id="provide_exp_id_here" --saved_model="provide_complete_path_to_saved_ssl_pretrained_model"
+  ```
 
 ### Pretrained weights
  
