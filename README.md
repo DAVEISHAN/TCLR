@@ -74,4 +74,4 @@ If you find the repo useful for your research, please consider citing our paper:
   publisher={Elsevier}
 }
 ```
-For any questions, welcome to create an issue or contact Ishan Dave ([ishandave@knights.ucf.edu](mailto:ishandave@knights.ucf.edu)).
+For any questions, welcome to create an issue or contact Ishan Dave ([ishandave@ucf.edu](mailto:ishandave@ucf.edu)).
